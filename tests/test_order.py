@@ -6,7 +6,7 @@ from app import create_app
 
 from app.resources.orders import Order, Orders
 
-ADD_ENTRY_URL = '/api/v1/orders/7'
+ADD_URL = '/api/v1/orders/7'
 ADD_UPDATE_URL = '/api/v1/orders/8'
 GET_SINGLE_URL = '/api/v1/orders/1'
 GET_ALL_URL = '/api/v1/orders'
@@ -28,7 +28,7 @@ class TestOrders(TestBase):
 
     def test_place_an_order(self):
         """ Test to place an order """
-        response = self.client.post(ADD_ENTRY_URL,
+        response = self.client.post(ADD_URL,
                                     data=json.dumps(dict(order_id=7,
                                                          name="Sharon Ngina",
                                                          type="Pizza",
