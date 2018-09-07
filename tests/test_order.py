@@ -1,7 +1,6 @@
 import unittest
 import json
 from flask_testing import TestCase
-
 from app import create_app
 
 from app.resources.orders import Order, Orders
